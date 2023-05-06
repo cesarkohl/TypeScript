@@ -117,7 +117,7 @@ export interface ReusableBuilderProgramState extends BuilderState {
     /**
      * Cache of bind and check diagnostics for files with their Path being the key
      */
-    semanticDiagnosticsPerFile?: Map<Path, readonly ReusableDiagnostic[] | readonly Diagnostic[]> | undefined;
+    semanticDiagnosticsPerFile: Map<Path, readonly ReusableDiagnostic[] | readonly Diagnostic[]> | undefined;
     /**
      * The map has key by source file's path that has been changed
      */
@@ -125,7 +125,7 @@ export interface ReusableBuilderProgramState extends BuilderState {
     /**
      * program corresponding to this state
      */
-    program?: Program | undefined;
+    program: Program | undefined;
     /**
      * compilerOptions for the program
      */
@@ -193,7 +193,7 @@ export interface BuilderProgramState extends BuilderState, ReusableBuilderProgra
     /**
      * Set of affected files being iterated
      */
-    affectedFiles?: readonly SourceFile[] | undefined;
+    affectedFiles: readonly SourceFile[] | undefined;
     /**
      * Current index to retrieve affected file from
      */
@@ -201,7 +201,7 @@ export interface BuilderProgramState extends BuilderState, ReusableBuilderProgra
     /**
      * Current changed file for iterating over affected files
      */
-    currentChangedFilePath?: Path | undefined;
+    currentChangedFilePath: Path | undefined;
     /**
      * Already seen affected files
      */
